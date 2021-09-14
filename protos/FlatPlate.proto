@@ -1,0 +1,30 @@
+#VRML_SIM R2018a utf8
+# Test driving on a flat plate
+
+PROTO FlatPlate [
+  field SFVec3f translation 0 0 .0005
+  field SFRotation rotation 0 0 1 0
+]
+{
+Solid {
+  translation IS translation
+  rotation IS rotation
+
+  children [
+    Shape {
+      appearance Appearance {
+			  material Material {
+			  	diffuseColor 0.5 0.5 0.5
+			  }
+	    }
+			geometry DEF TheBox Box {
+			  size .1 .1 .001
+			}
+		}
+	]
+
+  boundingObject USE TheBox
+
+} # Parent Solid
+
+} # PROTO

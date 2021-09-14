@@ -1,0 +1,160 @@
+#VRML_SIM R2018a utf8
+# tags: static, hidden
+PROTO CozmoLights []
+{
+  Group {
+    children [
+      LED {
+        name "ledHealth0"
+        children [
+          DEF BACK_HEALTH Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.764706 0.831373 0.835294
+              }
+            }
+            geometry IndexedFaceSet {
+              coord Coordinate {
+                point [
+                  -0.04743 0.000388 0.060936
+                  -0.051784 0.000388 0.059863
+                  -0.04743 -0.000379 0.060936
+                  -0.051784 -0.000379 0.059863
+                  -0.04743 5e-6 0.060936
+                  -0.051784 5e-6 0.059863
+                ]
+              }
+              coordIndex [
+                1, 4, 0, -1, 4, 3, 2, -1, 1, 5
+                4, -1, 4, 5, 3, -1
+              ]
+            }
+            castShadows FALSE
+          }
+        ]
+        color []
+        gradual TRUE
+      }
+
+      LED {
+        name "ledHealth1"
+        children [
+          DEF MIDDLE_HEALTH Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.764706 0.831373 0.835294
+              }
+            }
+            geometry IndexedFaceSet {
+              coord Coordinate {
+                point [
+                  -0.041735 0.000366 0.062343
+                  -0.046089 0.000366 0.06127
+                  -0.041735 -0.000357 0.062343
+                  -0.046089 -0.000357 0.06127
+                  -0.041735 5e-6 0.062343
+                  -0.046089 5e-6 0.06127
+                ]
+              }
+              coordIndex [
+                1, 4, 0, -1, 4, 3, 2, -1, 1, 5
+                4, -1, 4, 5, 3, -1
+              ]
+            }
+            castShadows FALSE
+          }
+        ]
+        color []
+        gradual TRUE
+      }
+
+      LED {
+        name "ledHealth2"
+        children [
+          DEF FRONT_HEALTH Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.764706 0.831373 0.835294
+              }
+            }
+            geometry IndexedFaceSet {
+              coord Coordinate {
+                point [
+                  -0.036175 0.000323 0.063716
+                  -0.040529 0.000323 0.062643
+                  -0.036175 -0.000314 0.063716
+                  -0.040529 -0.000314 0.062643
+                  -0.036175 5e-6 0.063716
+                  -0.040529 5e-6 0.062643
+                ]
+              }
+              coordIndex [
+                1, 4, 0, -1, 4, 3, 2, -1, 1, 5
+                4, -1, 4, 5, 3, -1
+              ]
+            }
+            castShadows FALSE
+}
+        ]
+        color []
+        gradual TRUE
+      }
+
+      LED {
+        name "ledDirLeft"
+        children [
+          DEF LEFT_DIRECTIONAL Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.764706 0.831373 0.835294
+              }
+            }
+            geometry IndexedFaceSet {
+              coord Coordinate {
+                point [
+                  -0.046656 0.003224 0.06134
+                  -0.042624 0.001296 0.062319
+                  -0.050637 0.001296 0.06017
+                ]
+              }
+              coordIndex [
+                0, 2, 1, -1
+              ]
+            }
+            castShadows FALSE
+          }
+        ]
+        color []
+        gradual TRUE
+      }
+
+      LED {
+        name "ledDirRight"
+        children [
+          DEF RIGHT_DIRECTIONAL Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.764706 0.831373 0.835294
+              }
+            }
+            geometry IndexedFaceSet {
+              coord Coordinate {
+                point [
+                  -0.046645 -0.003218 0.061299
+                  -0.042613 -0.00129 0.062278
+                  -0.050636 -0.001288 0.060167
+                ]
+              }
+              coordIndex [
+                0, 1, 2, -1
+              ]
+            }
+            castShadows FALSE
+          }
+        ]
+        color []
+        gradual TRUE
+      }
+    ]
+  }
+}

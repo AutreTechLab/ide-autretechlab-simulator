@@ -1,0 +1,25 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.01685775218118019 0.9997490825761467 -0.014750867077939466 1.7884506814384469
+  position 4.065762545062972 0.27676702484911525 -1.0408426416738452
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DirectionalLight {
+  direction 0 -1 0
+}
+CircleArena {
+}
+Thymio2_ATL {
+  controller "Thymio2_ATLIDE"
+  window "thymio2"
+}
+MazeBlock {
+  translation 0 0 0.5
+  length 0.4
+}

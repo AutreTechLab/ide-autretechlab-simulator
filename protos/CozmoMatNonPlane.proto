@@ -1,0 +1,30 @@
+#VRML_SIM R2018a utf8
+
+PROTO CozmoMatNonPlane [
+  field SFColor Color 1.0000 1.0000 1.0000
+  field SFFloat xSize 1.000
+  field SFFloat ySize 1.000
+]
+{
+Solid {
+  rotation 0 1 0 0
+  translation 0 0 -0.0025
+  children [
+    DEF BOX Shape {
+      appearance Appearance {
+         material Material {
+		   diffuseColor IS Color
+         }
+      }
+      geometry Box {
+        size %{=fields.xSize.value}% %{=fields.ySize.value}% 0.015
+      }
+    }
+
+  ] # Solid children
+
+  contactMaterial "cmat_floor"
+  boundingObject USE BOX
+} # Solid
+
+} # Proto
