@@ -15,30 +15,30 @@ timestep = int(robot.getBasicTimeStep())
 # You should insert a getDevice-like function in order to get the
 # instance of a device of the robot. Something like:
 #  motor = robot.getMotor('motorname')
-#  ds = robot.getDistanceSensor('prox.horizontal.0')
+#  ds = Robot.getDevice('prox.horizontal.0')
 #  ds.enable(timestep)
 
 ds_index = 0
 send_message =""
 prox_horizontal = ["prox.horizontal.0", "prox.horizontal.1", "prox.horizontal.2", "prox.horizontal.3", "prox.horizontal.4", "prox.horizontal.5", "prox.horizontal.6"]
 for sensor in prox_horizontal:
-  prox_horizontal[ds_index] = robot.getDistanceSensor(sensor)
+  prox_horizontal[ds_index] = robot.getDevice(sensor)
   prox_horizontal[ds_index].enable(timestep)
   ds_index = ds_index + 1
   print(sensor)
 robot.wwiSendText("[0] [1] [2] [3] [4] [5] [6] [7] [8]")
 
-# prox_ground_0 = robot.getDistanceSensor("prox.ground.0")
+# prox_ground_0 = robot.getDevice("prox.ground.0")
 # prox_ground_0.enable(timestep)
-# prox_ground_1 = robot.getDistanceSensor("prox.ground.1")
+# prox_ground_1 = robot.getDevice("prox.ground.1")
 # prox_ground_1.enable(timestep)
 
 
 
 # Actuators
 ## Motors
-left_motor = robot.getMotor("motor.left")
-right_motor = robot.getMotor("motor.right")
+left_motor = robot.getDevice("motor.left")
+right_motor = robot.getDevice("motor.right")
 left_motor.setPosition(float('inf'))
 right_motor.setPosition(float('inf'))
 left_motor.setVelocity(0.0)
@@ -51,41 +51,41 @@ time = robot.getTime()
 #rgb_green = 0.5 * math.sin(math.pi() / float(LED_FREQ) * float(time) + float(math.pi()/3)) + 0.5;
 #rgb_blue = 0.5 * math.sin(math.pi() / float(LED_FREQ) * float(time) + float(2*math.pi()/3)) + 0.5;
 
-leds_top = robot.getLED("leds.top")
-leds_bottom_left = robot.getLED("leds.bottom.left")
-leds_bottom_right = robot.getLED("leds.bottom.right")
+leds_top = robot.getDevice("leds.top")
+leds_bottom_left = robot.getDevice("leds.bottom.left")
+leds_bottom_right = robot.getDevice("leds.bottom.right")
 leds_buttons_led = [
-    robot.getLED("leds.buttons.led0"),
-    robot.getLED("leds.buttons.led1"),
-    robot.getLED("leds.buttons.led2"),
-    robot.getLED("leds.buttons.led3")
+    robot.getDevice("leds.buttons.led0"),
+    robot.getDevice("leds.buttons.led1"),
+    robot.getDevice("leds.buttons.led2"),
+    robot.getDevice("leds.buttons.led3")
     ]
 leds_circle_led = [
-    robot.getLED("leds.circle.led0"),
-    robot.getLED("leds.circle.led1"),
-    robot.getLED("leds.circle.led2"),
-    robot.getLED("leds.circle.led3"),
-    robot.getLED("leds.circle.led4"),
-    robot.getLED("leds.circle.led5"),
-    robot.getLED("leds.circle.led6")
+    robot.getDevice("leds.circle.led0"),
+    robot.getDevice("leds.circle.led1"),
+    robot.getDevice("leds.circle.led2"),
+    robot.getDevice("leds.circle.led3"),
+    robot.getDevice("leds.circle.led4"),
+    robot.getDevice("leds.circle.led5"),
+    robot.getDevice("leds.circle.led6")
     ]
 leds_prox_h_led = [
-    robot.getLED("leds.prox.h.led0"),
-    robot.getLED("leds.prox.h.led1"),
-    robot.getLED("leds.prox.h.led2"),
-    robot.getLED("leds.prox.h.led3"),
-    robot.getLED("leds.prox.h.led4"),
-    robot.getLED("leds.prox.h.led5"),
-    robot.getLED("leds.prox.h.led6")
+    robot.getDevice("leds.prox.h.led0"),
+    robot.getDevice("leds.prox.h.led1"),
+    robot.getDevice("leds.prox.h.led2"),
+    robot.getDevice("leds.prox.h.led3"),
+    robot.getDevice("leds.prox.h.led4"),
+    robot.getDevice("leds.prox.h.led5"),
+    robot.getDevice("leds.prox.h.led6")
     ]
 leds_prox_v_led = [
-    robot.getLED("leds.prox.v.led0"),
-    robot.getLED("leds.prox.v.led1")
+    robot.getDevice("leds.prox.v.led0"),
+    robot.getDevice("leds.prox.v.led1")
     ]
-leds_sound = robot.getLED("leds.sound")
-leds_rc = robot.getLED("leds.rc")
-leds_temperature_red = robot.getLED("leds.temperature.red")
-leds_temperature_blue = robot.getLED("leds.temperature.blue")
+leds_sound = robot.getDevice("leds.sound")
+leds_rc = robot.getDevice("leds.rc")
+leds_temperature_red = robot.getDevice("leds.temperature.red")
+leds_temperature_blue = robot.getDevice("leds.temperature.blue")
 
 print(str(leds_prox_v_led))
 
